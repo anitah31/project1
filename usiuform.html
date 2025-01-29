@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU Advanced Web Development Evaluation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            min-height: 100vh;
+        }
+        .container {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        input[type="checkbox"] {
+            width: auto;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 20%;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>USIU Advanced Web Development Evaluation Form</h2>
+        <form action="submit.php" method="post">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="student-id" placeholder="Enter your USIU Student ID" required>
+
+            <label for="email">USIU Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your USIU email" required>
+
+            <label for="github">GitHub Profile URL:</label>
+            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL" required>
+
+            <label for="phone">Local Phone Number (WhatsApp-enabled):</label>
+            <input type="tel" id="phone" name="phone" placeholder="+2547XX-XXX-XXX" required>
+
+            <label for="problem-solving">1. Nairobi-Specific Problem Solving:</label>
+            <textarea id="problem-solving" name="problem-solving" rows="4" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
+
+            <label for="framework">2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
+            <select id="framework" name="framework" required>
+                <option value="React.js">React.js</option>
+                <option value="Vue.js">Vue.js</option>
+                <option value="Angular">Angular</option>
+            </select>
+
+            <label>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
+            <div class="radio-group">
+                <input type="radio" id="database-caching" name="laravel-optimization" value="Database Caching">
+                <label for="database-caching">Database Caching</label><br>
+
+                <input type="radio" id="queues" name="laravel-optimization" value="Queues & Job Scheduling">
+                <label for="queues"><strong>Queues & Job Scheduling</strong></label><br>
+
+                <input type="radio" id="horizontal-scaling" name="laravel-optimization" value="Horizontal Scaling">
+                <label for="horizontal-scaling"><strong>Horizontal Scaling</strong></label>
+            </div>
+
+            <label for="project-upload">4. Upload a link to a past web project (PDF/Screenshot):</label>
+            <input type="file" id="project-upload" name="project-upload" accept=".pdf, .jpg, .png">
+
+            <label for="hosting-provider">5. Select a Kenyan hosting provider that supports M-Pesa payments:</label>
+            <select id="hosting-provider" name="hosting-provider" required>
+                <option value="Safaricom Cloud">Safaricom Cloud</option>
+                <option value="Truehost Kenya">Truehost Kenya</option>
+                <option value="HostPinnacle Kenya">HostPinnacle Kenya</option>
+                <option value="Kenya Web Experts">Kenya Web Experts</option>
+            </select>
+
+            <label for="optimization">6. How would you optimize a web app for Nairobi users on 2G/3G networks?</label>
+            <textarea id="optimization" name="optimization" rows="4" placeholder="Explain using PWA, lazy loading, and CDN strategies"></textarea>
+
+            <label for="tech-startups">7. Name two Kenyan tech startups actively hiring full-stack developers:</label>
+            <input type="text" id="tech-startups" name="tech-startups" placeholder="Example: Cellulant, Twiga Foods" required>
+
+            <label for="freelancing-platforms">8. Name two Kenyan freelancing platforms for web developers besides Upwork/Fiverr:</label>
+            <input type="text" id="freelancing-platforms" name="freelancing-platforms" placeholder="Example: Kuhustle, WorkPay Africa" required>
+
+            <input type="checkbox" id="certification" name="certification" required>
+            <label for="certification"><strong>I certify that all responses are original and not AI-generated.</strong></label>
+
+            <button type="submit" class="submit-btn">Submit Form</button>
+        </form>
+    </div>
+
+</body>
+</html>
