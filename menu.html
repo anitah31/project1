@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EatNow Cafe Menu</title>
+</head>
+<body>
+
+  <script>
+    let firstName = prompt("Kindly enter your first name:");
+    if (!firstName) {
+      firstName = "Guest";
+    }
+
+    alert(`Welcome to EatNow cafe, ${firstName}!`);
+
+    const menuItems = [
+    "Ugali with Sukuma Wiki and Nyama Choma",
+    "Pilau",
+    "Chapati with Beans",
+    "Githeri",
+    "Mandazi with Tea"
+  ];
+
+  console.log("EatNow Cafe Menu:");
+  menuItems.forEach((item, index) => {
+    console.log(`${index + 1}. ${item}`);
+  });
+
+
+  let newDish = prompt("Suggest a new dish:");
+  if (newDish) {
+    menuItems.push(newDish);
+    console.log("Updated EatNow Cafe Menu:");
+    menuItems.forEach((item, index) => {
+      console.log(`${index + 1}. ${item}`);
+    });
+  } else {
+    console.log("No new dish added.");
+  }
+
+  </script>
+
+</body>
+</html>
