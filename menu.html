@@ -8,13 +8,14 @@
 <body>
 
   <script>
+    //This step is to prompt the user to indicate the first name if not the browser will automatically put Guest.
     let firstName = prompt("Kindly enter your first name:");
     if (!firstName) {
       firstName = "Guest";
     }
 
     alert(`Welcome to EatNow cafe, ${firstName}!`);
-
+    // this is the list of dishes that the user is to choose from
     const menuItems = [
     "Ugali with Sukuma Wiki and Nyama Choma",
     "Pilau",
@@ -28,7 +29,7 @@
     console.log(`${index + 1}. ${item}`);
   });
 
-
+   //incase the user wants a new dish it will prompt the user to indicate,if it is not there the new dish will be added below
   let newDish = prompt("Suggest a new dish:");
   if (newDish) {
     menuItems.push(newDish);
